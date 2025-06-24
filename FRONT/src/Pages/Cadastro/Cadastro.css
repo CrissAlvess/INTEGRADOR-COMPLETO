@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+/* ==========================
+   RESET GLOBAL
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* ==========================
+   FUNDO DA TELA DE CADASTRO
+========================== */
+.cadastro-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #6b52bb, #331c51, #6ccfdf);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.cadastro-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.65;
+  z-index: 1;
+}
+
+/* ==========================
+   CONTAINER PRINCIPAL CADASTRO
+========================== */
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  top: -32px;
+  z-index: 2; 
+}
+
+/* ==========================
+   BOX CADASTRO
+========================== */
+.cadastro-box {
+  display: flex;
+  width: 1000px;  
+  height: 550px;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================
+   IMAGEM CADASTRO
+========================== */
+.cadastro-image {
+  width: 70%;
+}
+
+.cadastro-image img {
+  width: 99%;
+  height: 99%;
+  object-fit: cover;
+  position: relative;
+  top: 3px;
+  left: 1px;
+  border-radius: 22px;
+}
+
+/* ==========================
+   FORMULÁRIO CADASTRO
+========================== */
+.cadastro-form {
+  width: 55%;  
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cadastro-form h2 {
+  color: #4b0082;
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  font-size: 15px;
+  border: none;
+  border-bottom: 2px solid #a6a6a6;
+  outline: none;
+  background-color: transparent !important;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #4b0082;
+}
+
+/* ÍCONES DENTRO DOS INPUTS */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+/* ==========================
+   BOTÃO CADASTRAR
+========================== */
+.cadastro-button {
+  background: linear-gradient(90deg, #6ccfdf, #331c51, #6b52bb);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 10px;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+  top: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cadastro-button:hover {
+  opacity: 0.9;
+}
+
+/* ==========================
+   REDIRECIONAMENTO LOGIN
+========================== */
+.login-redirect {
+  margin-top: 25px;
+  font-size: 14px;
+  text-align: center;
+  color: #444;
+  font-weight: 400;
+  position: relative;
+  top: 40px;
+}
+
+.login-redirect a {
+  color: #4b0082;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+
+.login-redirect a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #4b0082;
+  transition: width 0.3s ease;
+}
+
+.login-redirect a:hover::after {
+  width: 100%;
+}

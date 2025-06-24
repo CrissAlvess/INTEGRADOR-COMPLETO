@@ -1,0 +1,116 @@
+/* Modal Overlay - fundo escuro com blur */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Container do modal */
+.modal {
+  background: white;
+  padding: 30px 24px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90vw;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Montserrat', sans-serif;
+  color: #331c51;
+}
+
+/* Título do modal */
+.modal h2 {
+  font-size: 1.8rem;
+  color: #491f80;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Formulário interno */
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Labels dos inputs */
+.modal label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Campos de entrada */
+.modal input {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Placeholder dos inputs */
+.modal input::placeholder {
+  color: #aaa;
+}
+
+/* Estilo ao focar no input */
+.modal input:focus {
+  border-color: #491f80;
+  box-shadow: 0 0 6px rgba(73, 31, 128, 0.3);
+}
+
+/* Container dos botões */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+/* Botões genéricos */
+.modal button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 3px 10px rgba(73, 31, 128, 0.15);
+}
+
+/* Botão submit */
+.modal button[type="submit"] {
+  background-color: #491f80;
+  color: white;
+}
+
+/* Hover do botão submit */
+.modal button[type="submit"]:hover {
+  background-color: #3a1662;
+  box-shadow: 0 5px 15px rgba(58, 22, 98, 0.5);
+}
+
+/* Botão cancel / secundário */
+.modal button[type="button"] {
+  background-color: #e0e0e0;
+  color: #4a4a4a;
+}
+
+/* Hover do botão cancel */
+.modal button[type="button"]:hover {
+  background-color: #cfcfcf;
+}

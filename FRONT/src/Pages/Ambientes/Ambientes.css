@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* ======== ESTILO GLOBAL ======== */
+html, body {
+  overflow-y: auto;
+}
+
+/* ======== FUNDO GRADIENTE ======== */
+.ambientes-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #331c51, #6b52bb, #6ccfdf);
+  z-index: 0;
+}
+
+.ambientes-background::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.65);
+  pointer-events: none;
+}
+
+/* ======== CONTAINER PRINCIPAL ======== */
+.ambientes-container {
+  position: relative; 
+  top: -30px;
+  z-index: 1;
+  padding-top: 80px;
+  padding-bottom: 40px; 
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; 
+  box-sizing: border-box;
+}
+
+.ambientes-container >* {
+  z-index: 2; 
+}
+
+/* ======== HEADER & TÍTULO ======== */
+.ambientes-header {
+  position: relative;
+  width: 100%;
+  padding: 0 40px;
+  margin-top: 30px;
+  height: 60px;
+}
+
+.ambientes-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  position: relative;
+  right: 750px;
+  top: 40px;
+}
+
+/* ======== INPUT DE PESQUISA ======== */
+.ambientes-search-group {
+  display: flex;
+  align-items: center;
+}
+
+.ambientes-input-wrapper {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto; 
+}
+
+.ambientes-input {
+  width: 90%;
+  padding: 10px 35px 10px 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  top: -30px;
+}
+
+.ambientes-search-icon {
+  position: absolute;
+  top: -12px;
+  right: 40px;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+/* ======== BOTÃO NOVO AMBIENTE ======== */
+.ambientes-button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ambientes-button {
+  position: absolute;
+  top: -12px;
+  right: 160px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.ambientes-button-text {
+  font-size: 13px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ======== GRID DE CARDS ======== */
+.ambientes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px 30px;
+  justify-content: center;
+}
+
+/* ======== CARD INDIVIDUAL ======== */
+.ambiente-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* ======== BOTÃO PLANILHA (DOWNLOAD/UPLOAD) ======== */
+.planilha-button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  top: -69px;
+  left: 520px;
+}
+
+.planilha-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.planilha-button-text {
+  pointer-events: none;
+}
+
+.planilha-button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* ======== DROPDOWN MENU PLANILHA ======== */
+.menu-container {
+  position: relative;
+  z-index: 0;
+}
+
+.planilha-dropdown-menu {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  padding: 8px 0;
+  top: -25px;
+  left: 490px;
+  z-index: 9999;
+}
+
+.planilha-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.planilha-dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
+/* ======== MENU E CONTAINERS RELACIONADOS ======== */
+.menu-container,
+.pai-do-menu {
+  position: relative; 
+  z-index: 10; 
+  overflow: visible; 
+}
+
+/* ======== PAGINAÇÃO ======== */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+  user-select: none;
+  color: white; 
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pagination button {
+  background-color: transparent; 
+  border: 2px solid white;       
+  color: white;                  
+  font-weight: 700;
+  padding: 8px 16px;
+  margin: 0 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 50px;
+  border-radius: 7px;
+}
+
+.pagination button:first-child {
+  margin-right: 24px;
+}
+
+.pagination button:last-child {
+  margin-left: 24px;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: white;   
+  color: #331c51;           
+}
+
+.pagination button:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+  color: #eee;
+}
+
+.pagination span {
+  font-size: 16px;
+  vertical-align: middle;
+  color: white;
+}

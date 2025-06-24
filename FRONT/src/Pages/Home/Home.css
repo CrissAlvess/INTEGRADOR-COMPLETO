@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.Home {
+  background: linear-gradient(135deg, #331c51, #6b52bb, #6ccfdf);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  box-sizing: border-box;
+
+  z-index: 0;
+}
+
+.Home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.50;
+  z-index: 1;
+}
+
+.Home > * {
+  z-index: 2;
+}
+
+.Main {
+  max-width: 1200px;
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.Intro h2,
+.Intro h3 {
+  margin: 0;
+  line-height: 1.2;
+  position: relative;
+  top: 50px;
+}
+
+.IntroLine1 {
+  font-size: 1.5rem;
+  display: block;
+  color: #ffffff;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.IntroLine2 {
+  font-size: 2rem;
+  display: block;
+  color: #ffffff;
+  margin-top: 8px;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-style: italic;
+  position: relative;
+  top: -7px;
+}
+
+.BlackBar {
+  position: relative;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 1;
+  right: 380px;
+  top: 100px;
+}
+
+.FeaturesContainer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: nowrap;
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.Feature {
+  position: relative;
+  max-width: 220px;
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.Feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Gradiente para o 1º ícone */
+.Feature:nth-child(1)::before {
+  background: linear-gradient(135deg, #6b52bb 0%, #331c51 50%, #6ccfdf 100%);
+}
+
+/* Gradiente para o 2º ícone */
+.Feature:nth-child(2)::before {
+  background: linear-gradient(135deg, #6ccfdf 0%, #331c51 50%, #6b52bb 100%);
+}
+
+/* Gradiente para o 3º ícone */
+.Feature:nth-child(3)::before {
+  background: linear-gradient(135deg, #6b52bb 0%, #331c51 50%, #6ccfdf 100%);
+}
+
+.CircleIcon {
+  width: 350px;
+  height: 250px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  position: relative;
+  z-index: 3;
+}
+
+.Feat1Line1,
+.Feat2Line1,
+.Feat3Line1,
+.Feat1Line2,
+.Feat2Line2,
+.Feat3Line2 {
+  display: inline;
+  white-space: nowrap;
+}
+
+/* Monitoramento em Tempo Real de Sensores */
+.Feat1Line1 {
+  display: block;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.Feat1Line2 {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  top: -15px;
+}
+
+/* Análise de Dados para Decisões Públicas */
+.Feat2Line1 {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Feat2Line2 {
+  display: block;
+  font-size: 1rem;
+  color: #ccc;
+  position: relative;
+  top: -15px;
+}
+
+/* Plataforma Acessível de Qualquer Lugar */
+.Feat3Line1 {
+  display: block;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.Feat3Line2 {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  top: -15px;
+}

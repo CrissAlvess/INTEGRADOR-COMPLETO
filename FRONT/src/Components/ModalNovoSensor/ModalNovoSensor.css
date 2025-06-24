@@ -1,0 +1,131 @@
+/* Modal Overlay - fundo semi-transparente com blur */
+.modal-sensor-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Container do modal sensor */
+.modal-sensor {
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  width: 430px;
+  max-width: 90vw;
+  font-family: 'Montserrat', sans-serif;
+  color: #491f80;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Título do modal sensor */
+.modal-sensor h2 {
+  font-size: 1.6rem;
+  color: #491f80;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* Formulário */
+.modal-sensor form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Labels dos campos */
+.modal-sensor label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #4a4a4a;
+  display: block;
+}
+
+/* Inputs e selects */
+.modal-sensor input,
+.modal-sensor select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border: 2px solid #dcdcdc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Placeholder dos inputs */
+.modal-sensor input::placeholder {
+  color: #aaa;
+}
+
+/* Estilo ao focar em input ou select */
+.modal-sensor input:focus,
+.modal-sensor select:focus {
+  border-color: #491f80; /* cor atualizada */
+  box-shadow: 0 0 5px rgba(73, 31, 128, 0.4); /* cor atualizada */
+}
+
+/* Mensagens de erro */
+.error-message {
+  color: #e03131;
+  font-size: 0.75rem;
+  margin-top: 3px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Container dos botões */
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Botões */
+.modal-sensor button {
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 3px 10px rgba(73, 31, 128, 0.15);
+}
+
+/* Botão submit */
+.modal-sensor button[type="submit"] {
+  background-color: #491f80;
+  color: white;
+}
+
+/* Hover do botão submit */
+.modal-sensor button[type="submit"]:hover {
+  background-color: #3c176b;
+  box-shadow: 0 5px 14px rgba(60, 23, 107, 0.4);
+}
+
+/* Botão cancel / secundário */
+.modal-sensor button[type="button"] {
+  background-color: #e0e0e0;
+  color: #4a4a4a;
+}
+
+/* Hover do botão cancel */
+.modal-sensor button[type="button"]:hover {
+  background-color: #cfcfcf;
+}

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+/* ==========================
+   RESET GLOBAL
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+/* ==========================
+   BACKGROUND LOGIN
+========================== */
+.login-background {
+  position: fixed; /* fixo para cobrir toda a viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #6b52bb, #331c51, #6ccfdf); 
+  overflow: hidden;
+  z-index: 0; /* abaixo do conteúdo */
+}
+
+.login-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.65;
+  z-index: 1;
+}
+
+/* ==========================
+   CONTAINER PRINCIPAL LOGIN
+========================== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  z-index: 2; /* acima do fundo e do ::after */
+}
+
+/* ==========================
+   BOX LOGIN
+========================== */
+.login-box {
+  display: flex;
+  width: 1000px;  
+  height: 550px;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================
+   IMAGEM LOGIN
+========================== */
+.login-image {
+  width: 70%; 
+}
+
+.login-image img {
+  width: 99%;
+  height: 99%;
+  object-fit: cover;
+  position: relative;
+  top: 3px;
+  left: 1px;
+  border-radius: 22px;
+}
+
+/* ==========================
+   FORMULÁRIO LOGIN
+========================== */
+.login-form {
+  width: 55%;  
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form h2 {
+  color: #4b0082;
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 700; 
+}
+
+/* ==========================
+   INPUTS
+========================== */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid #a6a6a6; 
+  outline: none;
+  background-color: transparent;
+  color: #000;
+  transition: border-color 0.3s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input-group input:focus {
+  border-color: #4b0082;
+}
+
+/* ÍCONES DENTRO DOS INPUTS */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+/* ==========================
+   BOTÃO LOGIN
+========================== */
+.login-button {
+  background: linear-gradient(90deg, #6ccfdf, #331c51, #6b52bb);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 10px;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.login-button:hover {
+  opacity: 0.9;
+}
+
+/* ==========================
+   LINK CADASTRE-SE
+========================== */
+.signup {
+  margin-top: 25px;
+  font-size: 14px;
+  text-align: center;
+  color: #444;
+  font-weight: 400; 
+}
+
+.signup a {
+  color: #4b0082;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+
+.signup a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 0;
+  height: 2px;
+  background-color: #4b0082;
+  transition: width 0.3s ease;
+}
+
+.signup a:hover::after {
+  width: 100%;
+}
