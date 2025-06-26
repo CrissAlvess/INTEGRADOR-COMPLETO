@@ -1,28 +1,36 @@
 # Instruções para Executar o Projeto
 
-## BACKEND
+## Backend
 
 1. Abra a pasta `BACK`.
-2. No caminho da pasta, digite `CMD` para abrir o terminal.
-3. Ative o ambiente virtual com o comando:
+2. No caminho da pasta, digite `CMD` na barra de endereços para abrir o terminal.
+3. Crie o ambiente virtual com o comando:
    ```bash
-   venv\Scripts\Activate
+   py -m venv env
    ```
-4. Instale as dependências com o comando:
+4. Ative o ambiente virtual com o comando:
+   ```bash
+   env\Scripts\activate
+   ```
+5. Instale as dependências com o comando:
    ```bash
    pip install -r requirements.txt
    ```
-5. Após terminar a instalação das dependências, rode o backend com o comando:
+6. Após a instalação das dependências, execute o backend com o comando:
    ```bash
    py manage.py runserver
    ```
 
-## FRONTEND
+## Frontend
 
 1. Abra a pasta `FRONT`.
-2. No caminho da pasta, digite `CMD` para abrir o terminal.
-3. Inicie o frontend com o comando:
+2. No caminho da pasta, digite `CMD` na barra de endereços para abrir o terminal.
+3. Instale as dependências com o comando:
+   ```bash
+   npm i
+   ```
+4. Inicie o frontend com o comando:
    ```bash
    npm run dev
    ```
-4. Copie a URL que aparece em destaque no terminal e cole no navegador.
+5. Copie a URL exibida no terminal e cole no navegador para acessar o sistema.
